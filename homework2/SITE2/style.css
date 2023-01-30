@@ -1,0 +1,35 @@
+a { text-decoration: none; }
+
+a{
+    color: cornflowerblue;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h1{
+    color: #f7f0f0;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+p{
+    font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 30px;
+color: #d4d118;
+}
+
+h2{
+    color: coral;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 80px;
+}
+
+body {
+    background:
+      url(img/background/carbon-fibre.png)
+}
