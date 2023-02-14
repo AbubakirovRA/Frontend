@@ -3,6 +3,29 @@
     padding: 0;
 }
 
+body{
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-family: 'Gilroy-Heavy', sans-serif;
+    font-family: 'Gilroy-Light', sans-serif;
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
+}
+
+/* 1-й способ центрирования содержимого (устаревший) */
+/* .conteiner{
+    /* border: 1px solid #000;
+    width: 1280px;
+    margin: 0 auto;
+}*/
+
+/* 2-й способ центрирования */
+/* 623 - ширина контентной части из макета 1246/2 */
+/* в класс, который нужно центрировать, нужно добавить center в html */
+.center{
+    padding-left: calc(50% - 623px);
+    padding-right: calc(50% - 623px);
+}
+
 .top{
     margin-bottom: 99px;
 }
@@ -10,11 +33,22 @@
 .header{
     padding-top: 39px;
     padding-bottom: 39px;
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .top_content{
     margin-top: 160px;
     margin-bottom: 197px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .sub_title{
@@ -22,10 +56,34 @@
 }
 
 .title{
+    width: 300px;
     margin-bottom: 40px;
 }
 
 .top_buttons{
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
+.button{
+    border: none;
+    border-radius: 10px;
+    background: #2769a7;
+    padding: 10px 24px;
+    font-size: 16px;
+    height: 57px;
+    width: 171px;
+}
+
+.text{
+    width: 466px;
+}
+
+.main_img{
+    margin: 128px;
+}
