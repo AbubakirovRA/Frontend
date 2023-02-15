@@ -4,11 +4,8 @@
 }
 
 body{
-    font-family: 'Gilroy-Bold', sans-serif;
-    font-family: 'Gilroy-Heavy', sans-serif;
-    font-family: 'Gilroy-Light', sans-serif;
-    font-family: 'Gilroy-Medium', sans-serif;
-    font-family: 'Gilroy-Regular', sans-serif;
+    background: #020a18;
+    font-family: 'Open Sans';
 }
 
 /* 1-й способ центрирования содержимого (устаревший) */
@@ -47,17 +44,28 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.sub_title{
+.subtitle{
     margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: #3A68B8;
 }
 
 .title{
-    width: 300px;
+    width: 604px;
     margin-bottom: 40px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 130%;
+    color: #FFFFFF;
 }
 
 .top_buttons{
@@ -75,15 +83,38 @@ body{
     border-radius: 10px;
     background: #2769a7;
     padding: 10px 24px;
-    font-size: 16px;
-    height: 57px;
-    width: 171px;
+    height: auto;
+    width: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
 }
 
 .text{
     width: 466px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    color: #FFFFFF;
+    opacity: 0.7;
 }
 
-.main_img{
-    margin: 128px;
+.header_link{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.top_logos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
