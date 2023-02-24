@@ -1,0 +1,26 @@
+.carousel-control-next-icon {
+    background-color: red;
+}
+
+.carousel-control-prev-icon {
+    background-color: rgb(38, 0, 255);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 50px;
+    background-color: blue;
+}
+
+.dropdown-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    color: blueviolet;
+    font-style: italic;
+}
+
+.nav-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
