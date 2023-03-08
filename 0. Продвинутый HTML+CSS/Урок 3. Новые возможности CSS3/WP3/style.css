@@ -1,0 +1,48 @@
+#title{
+	border-image-source: url(/img/6630.jpg);
+	width: 260px; height: 100px; 
+	border-style: solid;
+	border-image-width: 15px;
+	border-image-slice: 30;
+	border-image-repeat: stretch;
+	
+}
+
+.text{
+	transition: right 0.4s;
+	background: #ffffff;
+	margin: 1em auto;
+	padding: 1em;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, .2);
+
+}
+
+.subtitle{
+    color: transparent; /* прозрачный цвет букв */
+    -webkit-text-stroke: 1px blue;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 140px solid #fcf921;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+}
+
+#triangle_down {
+	margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-top: 140px solid #20a3bf;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+}
+
+#triangle_left {
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-right: 140px solid #6bbf20;
+    border-bottom: 70px solid transparent;
+}

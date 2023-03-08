@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.details {}
+
+.summary {
+    display: block;
+    color: blue;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    /* //  знак вправо */
+    content: '\2192';
+    padding-left: 0.5em;
+    color: black;
+}
+
+details[open]>summary::before {
+    content: '\2193';
+    color: red;
+
+}
+
+/* // summary::after {
+//     color: red;
+// } */
+
+details[open]>summary::after {
+    color: green;
+
+}
