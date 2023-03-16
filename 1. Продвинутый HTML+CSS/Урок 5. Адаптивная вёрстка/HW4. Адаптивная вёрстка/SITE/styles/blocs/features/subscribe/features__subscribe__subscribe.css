@@ -1,0 +1,127 @@
+.subscribe {
+  min-height: 448px;
+  background-image: url(../../../../img/fog_backgrond-subscribe.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.subscribe_left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.icon-face {
+  margin-bottom: 30px;
+}
+
+.subscribe_left_text {
+  width: 360px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #222224;
+}
+
+.subscribe_left_italic_text {
+  font-style: italic;
+}
+
+.subscribe__heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 167.2%;
+  text-align: center;
+  color: #222224;
+}
+
+.subscribe__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30.1px;
+  text-align: center;
+  color: #222224;
+  margin-bottom: 27px;
+}
+
+.subscribe_form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: stretch;
+}
+
+.subscribe_button {
+  position: absolute;
+  left: 256px;
+}
+
+.subscribe_pink_button {
+  min-height: 53px;
+}
+
+.subscribe_action_link {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.subscribe_action_link:hover {
+  color: rgb(161, 22, 131);
+  text-decoration: underline;
+}
+
+.subscribe_action_link:active {
+  color: rgb(252, 234, 79);
+  text-decoration: underline;
+}
+
+.email_input_form {
+  border-radius: 50px;
+  background: #E1E1E1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222224;
+  opacity: 0.67;
+  width: 322px;
+  min-height: 49px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .subscribe {
+    flex-direction: column;
+    padding-top: 54px;
+    padding-bottom: 140px;
+  }
+  .subscribe__heading {
+    margin-top: 48px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .subscribe {
+    flex-direction: column;
+    padding-top: 54px;
+    padding-bottom: 140px;
+  }
+  .subscribe__heading {
+    margin-top: 48px;
+  }
+}/*# sourceMappingURL=features__subscribe__subscribe.css.map */

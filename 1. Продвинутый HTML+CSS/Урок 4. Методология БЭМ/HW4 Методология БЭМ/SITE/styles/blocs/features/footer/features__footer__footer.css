@@ -1,0 +1,67 @@
+.footer {
+  display: flex;
+  height: 79px;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #222222;
+  align-items: center;
+  padding-left: 235px;
+  padding-right: 230px;
+}
+
+.footer_copyrights {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FBFBFB;
+}
+
+.footer_right {
+  display: flex;
+  gap: 7.29px;
+}
+
+.facebook, .meta, .pinterest, .twitter {
+  width: 31.45px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+.icon:hover path {
+  fill: #E1E1E1;
+}
+
+.icon:hover {
+  background-color: #F16D7F;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    display: flex;
+    height: 79px;
+    justify-content: space-between;
+    background-color: #222222;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    display: flex;
+    max-height: 143px;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+    flex-direction: column-reverse;
+    padding-top: 43px;
+    padding-bottom: 9px;
+  }
+}/*# sourceMappingURL=features__footer__footer.css.map */
