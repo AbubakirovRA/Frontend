@@ -1,0 +1,188 @@
+.wrapper {
+  overflow: hidden;
+  min-width: 100vh;
+}
+
+.center {
+  padding-left: calc(50% - 800px);
+  padding-right: calc(50% - 800px);
+}
+
+body {
+  font-family: "Lato";
+}
+
+.reg__form {
+  display: flex;
+  padding-left: 230px;
+  padding-right: 230px;
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+.reg__form .reg__form__user__details__text, .reg__form .reg__form__user__details__password, .reg__form .reg__form__user__details__email, .reg__form .reg__form__user__details__lasname, .reg__form .reg__form__user__details__name {
+  width: 343px;
+  height: 45px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #b1b1b1;
+}
+.reg__form__user__details {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 128px;
+}
+.reg__form__user__details__subtitle {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-bottom: 20.5px;
+}
+.reg__form__user__details__name {
+  padding-left: 17.24px;
+}
+.reg__form__user__details__lasname {
+  padding-left: 17.24px;
+}
+.reg__form__user__details__gender_choice {
+  display: flex;
+  gap: 20px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+}
+.reg__form__user__details__gender_choice__radio_button {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 33px;
+}
+.reg__form__user__details__login {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-bottom: 20.5px;
+}
+.reg__form__user__details__email {
+  padding-left: 17.24px;
+}
+.reg__form__user__details__password {
+  padding-left: 17.24px;
+}
+.reg__form__user__details__text {
+  margin-top: 15.5px;
+}
+.reg__form__user__details__join-button {
+  text-decoration: none;
+  width: 167px;
+  height: 50px;
+  background-color: #f16d7f;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reg__form__user__details__join-button__arrow {
+  margin-left: 20px;
+}
+.reg__form__user__details__join-button:hover {
+  transform: scale(1.1, 1.1);
+  transition: all, 0.3s;
+}
+.reg__form__user__details__join-button:active {
+  color: #ef5b70;
+  background-color: #f5f3f3;
+  border: 1px solid #ef5b70;
+}
+.reg__form__user__details__join-button:active path {
+  fill: #ef5b70;
+}
+.reg__form__promo {
+  width: 652px;
+}
+.reg__form__promo .reg__form__promo__list__item, .reg__form__promo .reg__form__promo__text, .reg__form__promo .reg__form__promo__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 22px;
+}
+.reg__form__promo__list__item {
+  list-style-type: none;
+  gap: 16px;
+}
+.reg__form__promo__list__item__img {
+  margin-right: 23px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .reg__form {
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: space-around;
+  }
+  .reg__form__promo {
+    width: 354px;
+  }
+  .reg__form__user__details {
+    margin-right: 22px;
+  }
+  .reg__form__promo__text {
+    width: 354px;
+  }
+  .reg__form__promo .reg__form__promo__list__item,
+  .reg__form__promo .reg__form__promo__text,
+  .reg__form__promo .reg__form__promo__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    max-width: 375px;
+  }
+  .center {
+    padding-left: calc(50% - 187.5px);
+    padding-right: calc(50% - 187.5px);
+  }
+  .nav {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    margin-bottom: 39px;
+  }
+  .reg__form {
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 40px;
+    padding-bottom: 56px;
+    flex-direction: column;
+  }
+  .reg__form__user__details__join-button {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .reg__form__promo .reg__form__promo__text {
+    width: 358px;
+  }
+  .reg__form__promo .reg__form__promo__list__item,
+  .reg__form__promo .reg__form__promo__text,
+  .reg__form__promo .reg__form__promo__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}/*# sourceMappingURL=reg_style.css.map */

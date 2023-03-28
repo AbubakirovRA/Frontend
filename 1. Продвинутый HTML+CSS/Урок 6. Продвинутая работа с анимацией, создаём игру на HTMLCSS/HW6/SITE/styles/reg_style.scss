@@ -1,0 +1,236 @@
+.wrapper {
+    overflow: hidden;
+    min-width: 100vh;
+}
+
+.center {
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
+}
+
+body {
+    font-family: "Lato";
+}
+
+.reg__form {
+    display: flex;
+    padding-left: 230px;
+    padding-right: 230px;
+    padding-top: 64px;
+    padding-bottom: 96px;
+
+    %user_forms_font {
+        width: 343px;
+        height: 45px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #b1b1b1;
+    }
+
+    &__user__details {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 128px;
+
+        &__subtitle {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+            margin-bottom: 20.5px;
+        }
+
+        &__name {
+            @extend %user_forms_font;
+            padding-left: 17.24px;
+        }
+
+        &__lasname {
+            @extend %user_forms_font;
+            padding-left: 17.24px;
+        }
+
+        &__gender_choice {
+            display: flex;
+            gap: 20px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+            color: #000000;
+
+            &__radio_button {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 33px;
+            }
+        }
+
+        &__login {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+            margin-bottom: 20.5px;
+        }
+
+        &__email {
+            @extend %user_forms_font;
+            padding-left: 17.24px;
+        }
+
+        &__password {
+            @extend %user_forms_font;
+            padding-left: 17.24px;
+        }
+
+        &__text {
+            @extend %user_forms_font;
+            margin-top: 15.5px;
+        }
+
+        &__join-button {
+            text-decoration: none;
+            width: 167px;
+            height: 50px;
+            background-color: #f16d7f;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &__arrow {
+                margin-left: 20px;
+            }
+        }
+
+        &__join-button:hover {
+            transform: scale(1.1, 1.1);
+            transition: all, 0.3s;
+        }
+
+        &__join-button:active {
+            color: #ef5b70;
+            background-color: #f5f3f3;
+            border: 1px solid #ef5b70;
+        }
+
+        &__join-button:active path {
+            fill: #ef5b70;
+        }
+    }
+
+    &__promo {
+        width: 652px;
+
+        %promo_text_font {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin-bottom: 22px;
+        }
+
+        &__title {
+            @extend %promo_text_font;
+        }
+
+        &__text {
+            @extend %promo_text_font;
+        }
+
+        &__list {
+            &__item {
+                @extend %promo_text_font;
+                list-style-type: none;
+                gap: 16px;
+
+                &__img {
+                    margin-right: 23px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .reg__form {
+        padding-left: 16px;
+        padding-right: 16px;
+        justify-content: space-around;
+
+        &__promo {
+            width: 354px;
+        }
+
+        &__user__details {
+            margin-right: 22px;
+        }
+
+        &__promo__text {
+            width: 354px;
+        }
+    }
+
+    .reg__form__promo .reg__form__promo__list__item,
+    .reg__form__promo .reg__form__promo__text,
+    .reg__form__promo .reg__form__promo__title {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .wrapper {
+        max-width: 375px;
+    }
+
+    .center {
+        padding-left: calc(50% - 375px / 2);
+        padding-right: calc(50% - 375px / 2);
+    }
+
+    .nav {
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+        margin-bottom: 39px;
+    }
+
+    .reg__form {
+        display: flex;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 40px;
+        padding-bottom: 56px;
+        flex-direction: column;
+    }
+
+    .reg__form__user__details__join-button {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .reg__form__promo .reg__form__promo__text{
+        width:  358px;
+    }
+
+    .reg__form__promo .reg__form__promo__list__item, 
+    .reg__form__promo .reg__form__promo__text, 
+    .reg__form__promo .reg__form__promo__title {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

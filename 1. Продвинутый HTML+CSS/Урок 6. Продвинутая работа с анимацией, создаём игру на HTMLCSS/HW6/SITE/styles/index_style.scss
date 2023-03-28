@@ -1,0 +1,275 @@
+.wrapper {
+    overflow: hidden;
+    min-width: 100vh;
+}
+
+.center {
+    padding-left: calc(50% - 1600px / 2);
+    padding-right: calc(50% - 1600px / 2);
+}
+
+body {
+    font-family: "Lato";
+}
+
+.promo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background: #f1e4e6;
+}
+
+.promo__info {
+    border-left: 12px solid #f16d7f;
+    padding-left: 16px;
+    margin-left: 64px;
+}
+
+.promo__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    color: #222222;
+}
+
+.promo__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #222222;
+}
+
+.promo__heading_color {
+    color: #f16d7f;
+}
+
+.sale_center {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    margin-top: 65px;
+    margin-bottom: 96px;
+}
+
+.sale__item {
+    position: relative;
+    display: inline-block;
+}
+
+.sale-img:hover,
+.sale__content:hover {
+    transform: scale(1.03, 1.03);
+    transition: all 0.3s;
+}
+
+.sale__content {
+    position: absolute;
+    top: 105px;
+    right: 35%;
+}
+
+.sale_woman {
+    position: absolute;
+    top: 105px;
+    right: 105px;
+}
+
+.sale_content_item_big {
+    position: absolute;
+    top: 70px;
+    left: 400px;
+}
+
+.sale__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sale__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+    color: #f16d7f;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .top {
+        max-width: 768px;
+        padding-bottom: 71px;
+    }
+
+    .center {
+        padding-left: calc(50% - 768px / 2);
+        padding-right: calc(50% - 768px / 2);
+    }
+
+    .promo__img {
+        max-width: 386px;
+        min-height: 368px;
+    }
+
+    .promo-img {
+        max-width: 386px;
+    }
+
+    .promo__info {
+        border-left: 12px solid #f16d7f;
+        padding-left: 16px;
+        margin-left: 39px;
+    }
+
+    .promo__title {
+        font-size: 44px;
+        line-height: 53px;
+    }
+
+    .promo__heading {
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+
+    .sale-img {
+        width: 232px;
+    }
+
+    .sale-img_item_big {
+        width: 735px;
+    }
+
+    .sale_center {
+        gap: 20px;
+        margin-top: 65px;
+        margin-bottom: 110px;
+    }
+
+    .sale__content {
+        position: absolute;
+        top: 55px;
+        right: 25%;
+    }
+
+    .sale_woman {
+        top: 55px;
+        right: 15%;
+    }
+
+    .sale_content_item_big {
+        position: absolute;
+        top: 40px;
+        left: 190px;
+    }
+
+    .product-box__heading {
+        margin-bottom: 3.3px;
+    }
+
+    .product-box__content {
+        grid-template: repeat(3, 581px) / repeat(2, 360px);
+        gap: 15px;
+        margin-top: 74px;
+        margin-bottom: 33px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .top {
+        max-width: 375px;
+        padding-bottom: 71px;
+    }
+
+    .center {
+        padding-left: calc(50% - 375px / 2);
+        padding-right: calc(50% - 375px / 2);
+    }
+
+    .promo {
+        flex-wrap: nowrap;
+    }
+
+    .promo {
+        max-width: 375px;
+        min-height: 363px;
+    }
+
+    .promo-img {
+        display: none;
+    }
+
+    .promo__info {
+        border-left: 12px solid #f16d7f;
+        padding-left: 16px;
+        margin-left: 56px;
+    }
+
+    .promo__title {
+        font-size: 38px;
+        line-height: 45.6px;
+    }
+
+    .promo__heading {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .sale-img {
+        width: 343px;
+    }
+
+    .sale-img_item_big {
+        object-fit: cover;
+        width: 343px;
+        min-height: 111px;
+    }
+
+    .sale_center {
+        gap: 32px;
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    .sale__content {
+        top: 105px;
+        right: 35%;
+    }
+
+    .sale__text {
+        min-width: 160px;
+    }
+
+    .sale_woman {
+        top: 105px;
+        right: 105px;
+    }
+
+    .sale_content_item_big {
+        position: absolute;
+        top: 40px;
+        left: 27%;
+    }
+
+    .product-box__heading {
+        margin-bottom: 3.3px;
+    }
+
+    .product-box__content {
+        grid-template: repeat(6, 581px) / repeat(1, 360px);
+        gap: 16px;
+        margin-top: 65px;
+        margin-bottom: 41px;
+    }
+
+}

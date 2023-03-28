@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW2 JS-course</title>
+</head>
+
+<body>
+    <details>
+        <summary>Задание 1</summary>
+        <p>
+            Создать переменные num1, num2 которые пользователь вводит с клавиатуры<br>
+            Проверьте, что<br>переменная num1 равна или меньше 1,<br> а переменная num2 больше или равна 3.
+        </p>
+        <details>
+            <summary>Решение:</summary>
+            <p>
+                // ввод значений пользователя <br>
+                <br>
+                let num1 = Number(prompt('Введите первое значение num1: ')); <br>
+                let num2 = Number(prompt('Введите второе значение num2: ')); <br>
+                <br>
+                //Проверка условий с помощью тернарного оператора <br>
+                <br>
+                alert(num1 <= 1 ? "Условие num1 <= 1 выполняется" : "Условие num1 <= 1 не выполняется " ); <br>
+                    alert(num2 >= 3 ? "Условие num2 >= 3 выполняется" : "Условие num2 >= 3 не выполняется "); <br>
+            </p>
+            <button onclick="task1()">Пуск!</button>
+        </details>
+        <br>
+        <br>
+    </details>
+
+    <details>
+        <summary>Задание 2</summary>
+        <p>Перепишите код к тернарному оператору<br>
+            <br>
+            let test = true;<br>
+            if (test === true) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; console.log('+++');<br>
+            } else {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; console.log('---');<br>
+            }<br>
+        </p>
+        <details>
+            <summary>Решение:</summary>
+            <p>
+                // объявление и инициализация переменной test<br>
+                let test = true;<br>
+                <br>
+                //проверка условй при помощи тернарного оператора<br>
+                console.log(test === true ? '+++' : '---');<br>
+            </p>
+            <button onclick="task2()">Пуск!</button>
+        </details>
+        <br>
+        <br>
+    </details>
+
+    <details>
+        <summary>Задание 3</summary>
+        <p>
+            В переменной day лежит какое-то число из интервала от 1 до 31. <br>
+            Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
+        </p>
+
+        <details>
+            <summary>Решение</summary>
+            <br>
+            <p>
+                let day = 0;<br>
+                <br>
+                //Ввод пользователя<br>
+                while (day < 1 || day> 31) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; day = Number(prompt("Введите число месяца в диапазоне от 1 до 31: "));<br>
+                    }<br>
+                <br>
+                //Проверка декады<br>
+                if ((day % 10) <= 1){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; document.write("Дата входит в первую декаду");<br>
+                } else if (1 < (day % 10) <=2){<br>
+                    document.write("Дата входит во вторую декаду");<br>
+                } else{<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; document.write("Дата входит в третью декаду");<br>
+                }<br>
+            </p>
+            <button onclick="task3()">Пуск!</button>
+            <br>
+        </details>
+    </details>
+
+    <details>
+        <summary>Задание 4</summary>
+        <p>
+            Необязательное задание. (Если вам показалось домашнее задание простым, выполняем данный пункт) <br>
+            (Для решения задания вам потребуется оператор остаток от деления %, например 10%3 === 1 , десять разделить
+            <br>
+            на 3, остаток 1, второй пример 7 % 5, тут остаток от деления будет 2, ну и 3 пример это 14 % 10 === 4, <br>
+            остаток от деления на 10 будет равен 4) <br>
+            <br>
+            Необходимо от пользователя получить число. <br>
+            Необходимо вывести разряды числа, а именно: количество сотен, десятков и единиц. <br>
+            <br>
+            Пример: <br>
+            Пользователь ввел число 163. Программа должна вывести: <br>
+            "В числе 163 количество сотен: 1, десятков: 6, единиц: 3" <br>
+            <br>
+            Уточнение: пользователь всегда вводит корректное положительное целое число. <br>
+            <br>
+            <details>
+                <summary>Решение</summary>
+                <br>
+                <p>
+                    let userDigit = -1;//Ввод пользователя<br>
+                    let countOfDigit = 0;//счетчик разрядов<br>
+                    let remainder = 0;//остаток от деления на 10<br>
+                    let str = "";
+                    <br>
+                    //Ввод пользователя<br>
+                    while (userDigit < 0 || userDigit % 1 !== 0) {//проверка ввода пользователя<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;userDigit = Number(prompt("Введите целое положительное число: "));<br>
+                    }
+                    <br>
+                    let str1 = 'В числе ' + userDigit + ' количество '; <br>
+                    //Нахождение сотен, десятков, единиц<br>
+
+                    while ( userDigit > 0) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;remainder = userDigit % 10;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;switch (countOfDigit) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 0:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str = ', единиц: ' + remainder;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str = ', десятков: ' + remainder + str;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str = 'сотен: ' + remainder +str;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;userDigit = Math.floor(userDigit / 10);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;countOfDigit ++;<br>
+                    }<br>
+                    //Вывод строки <br> 
+                    document.write(str1 + str); <br>
+                    <br>
+                </p>
+                <button onclick="task4()">Пуск!</button>
+                <br>
+            </details>
+        </p>
+    </details>
+    <script src="script.js"></script>
+</body>
+
+</html>

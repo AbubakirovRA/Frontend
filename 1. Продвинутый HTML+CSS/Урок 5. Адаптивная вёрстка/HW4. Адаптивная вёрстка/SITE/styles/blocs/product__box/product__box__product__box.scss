@@ -34,7 +34,7 @@
   margin-bottom: 48.5px;
 }
 
-.product{
+.product {
   background: #F8F8F8;
 }
 
@@ -133,6 +133,7 @@
   .product-box__heading {
     margin-bottom: 3.3px;
   }
+
   .product-box__content {
     grid-template: repeat(3, 581px)/repeat(2, 360px);
     gap: 15px;
@@ -140,10 +141,12 @@
     margin-bottom: 33px;
   }
 }
+
 @media (min-width: 320px) and (max-width: 767px) {
   .product-box__heading {
     margin-bottom: 3.3px;
   }
+
   .product-box__content {
     grid-template: repeat(6, 581px)/repeat(1, 360px);
     gap: 16px;
