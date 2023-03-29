@@ -1,8 +1,33 @@
 $widthLamp: 50px;
 $iterationAnimation: 3;
 
+@keyframes lampFromHell {
+    0% {
+        left: -$widthLamp * 2;
+    }
+
+    50% {
+        left: random(70) + vw;
+        top: random(90) + vh;
+    }
+
+}
+
+@for $i from 1 through $iterationAnimation {
+    @keyframes lampFromHell-#{$i} {
+        0% {
+            left: -$widthLamp * 2;
+        }
+    
+        50% {
+            left: random(70) + vw;
+            top: random(90) + vh;
+        }
+    }
+}
+
 html {
-    background: url(img/Earth.jpg) no-repeat center;
+    background: url(img/background.png) no-repeat center;
     min-height: 100vh;
     background-size: cover;
 }
@@ -54,45 +79,19 @@ body {
     position: absolute;
     left: -$widthLamp * 2;
 
-
     @for $i from 1 through $iterationAnimation {
         &_#{$i} {
-            animation: lampFromHell-#{$i} 3s #{$i * 1}s;
+            animation: lampFromHell-#{$i} 3s #{$i * 2}s;
             animation-timing-function: step-end;
         }
     }
 }
 
-@keyframes lampFromHell {
-    0% {
-        left: -$widthLamp * 2;
-        display: block;
-    }
-
-    50% {
-        left: random(70) + vw;
-        top: random(90) + vh;
-    }
-
-    100%{
-        display: none;
-    }
-}
-
-@for $i from 1 through $iterationAnimation {
-    @keyframes lampFromHell-#{$i} {
-        0% {
-            left: -$widthLamp * 2;
-            display: block;
-        }
-    
-        50% {
-            left: random(70) + vw;
-            top: random(90) + vh;
-        }
-
-        100%{
-            display: none;
-        }
-    }
-}
+.dev-css {
+    position         : fixed;
+    left             : 1em;
+    top              : 1em;
+    padding          : 1em;
+    background-color : rgba(0, 0, 0, .6); 
+    color            : #FFF
+  }
