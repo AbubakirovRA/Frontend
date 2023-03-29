@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Game</title>
+    <title>CraZy Lamp</title>
 </head>
-
 <body>
     <div class="wrapper">
         <div class="lamp lamp_1">
-            <input type="checkbox" class="custom_checkbox" id="lamp1">
-            <label for="lamp1"><img class="checkbox__img" src="img/lamp.svg" alt="Lamp"></label>
+            <input type="checkbox" class="checkbox" id="lamp1">
+            <label for="lamp1"><img class="checkbox__img">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path style="fill:#FFCD00;" d="M256,131.38l-20.016,296.944l85.796-20.016v-46.455c35.324-21.998,58.84-61.177,58.84-105.854 C380.62,187.175,324.825,131.38,256,131.38z"/><path style="fill:#FFED94;" d="M131.38,256c0,44.677,23.516,83.856,58.84,105.854v46.455L256,428.325V131.38 C187.175,131.38,131.38,187.175,131.38,256z"/><polygon style="fill:#FF8E00;" points="288.527,233.022 256,265.549 245.992,418.317 271,408.309 271,292.975 309.74,254.235 "/><polygon style="fill:#FFCD00;" points="223.473,233.022 202.26,254.235 241,292.975 241,408.309 256,418.317 256,265.549 "/><rect y="241" style="fill:#FFED94;" width="66.33" height="30"/><rect x="445.67" y="241" style="fill:#FFCD00;" width="66.33" height="30"/><rect x="16.961" y="326.275" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 227.0415 637.3885)" style="fill:#FFED94;" width="66.332" height="30.001"/><rect x="428.693" y="155.731" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -30.179 189.7457)" style="fill:#FFCD00;" width="66.332" height="30.001"/><rect x="83.432" y="380.414" transform="matrix(0.7071 0.7071 -0.7071 0.7071 321.2741 51.5324)" style="fill:#FFED94;" width="30" height="66.329"/><g><rect x="398.562" y="65.264" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 636.3948 460.4608)" style="fill:#FFCD00;" width="30" height="66.329"/><rect x="326.274" y="16.958" transform="matrix(0.9239 0.3827 -0.3827 0.9239 45.1608 -126.7868)" style="fill:#FFCD00;" width="30.001" height="66.332"/><rect x="241" style="fill:#FFCD00;" width="30" height="66.33"/></g><rect x="137.563" y="35.122" transform="matrix(0.3827 0.9239 -0.9239 0.3827 151.6994 -126.7912)" style="fill:#FFED94;" width="66.332" height="30.001"/><rect x="380.409" y="398.573" transform="matrix(0.7071 0.7071 -0.7071 0.7071 413.5731 -171.308)" style="fill:#FFCD00;" width="66.329" height="30"/><rect x="65.262" y="83.427" transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.4267 -40.7695)" style="fill:#FFED94;" width="66.329" height="30"/><rect x="428.702" y="326.261" transform="matrix(0.9239 0.3827 -0.3827 0.9239 165.7562 -150.7744)" style="fill:#FFCD00;" width="66.332" height="30.001"/><rect x="16.963" y="155.725" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 31.1066 347.638)" style="fill:#FFED94;" width="66.332" height="30.001"/><polygon style="fill:#DCE4EC;" points="321.78,408.309 256,408.309 235.984,460.154 256,512 321.78,512 "/><rect x="190.22" y="408.31" style="fill:#F7F7F8;" width="65.78" height="103.69"/></svg>
+            </label>
         </div>
 
         <div class="lamp lamp_2">
-            <input type="checkbox" class="custom_checkbox" id="lamp2">
-            <label for="lamp2"><img class="checkbox__img" src="img/lamp.svg" alt="Lamp"></label>
+            <input type="checkbox" class="checkbox" id="lamp2">
+            <label for="lamp2"><img class="checkbox__img">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path style="fill:#FFCD00;" d="M256,131.38l-20.016,296.944l85.796-20.016v-46.455c35.324-21.998,58.84-61.177,58.84-105.854 C380.62,187.175,324.825,131.38,256,131.38z"/><path style="fill:#FFED94;" d="M131.38,256c0,44.677,23.516,83.856,58.84,105.854v46.455L256,428.325V131.38 C187.175,131.38,131.38,187.175,131.38,256z"/><polygon style="fill:#FF8E00;" points="288.527,233.022 256,265.549 245.992,418.317 271,408.309 271,292.975 309.74,254.235 "/><polygon style="fill:#FFCD00;" points="223.473,233.022 202.26,254.235 241,292.975 241,408.309 256,418.317 256,265.549 "/><rect y="241" style="fill:#FFED94;" width="66.33" height="30"/><rect x="445.67" y="241" style="fill:#FFCD00;" width="66.33" height="30"/><rect x="16.961" y="326.275" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 227.0415 637.3885)" style="fill:#FFED94;" width="66.332" height="30.001"/><rect x="428.693" y="155.731" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -30.179 189.7457)" style="fill:#FFCD00;" width="66.332" height="30.001"/><rect x="83.432" y="380.414" transform="matrix(0.7071 0.7071 -0.7071 0.7071 321.2741 51.5324)" style="fill:#FFED94;" width="30" height="66.329"/><g><rect x="398.562" y="65.264" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 636.3948 460.4608)" style="fill:#FFCD00;" width="30" height="66.329"/><rect x="326.274" y="16.958" transform="matrix(0.9239 0.3827 -0.3827 0.9239 45.1608 -126.7868)" style="fill:#FFCD00;" width="30.001" height="66.332"/><rect x="241" style="fill:#FFCD00;" width="30" height="66.33"/></g><rect x="137.563" y="35.122" transform="matrix(0.3827 0.9239 -0.9239 0.3827 151.6994 -126.7912)" style="fill:#FFED94;" width="66.332" height="30.001"/><rect x="380.409" y="398.573" transform="matrix(0.7071 0.7071 -0.7071 0.7071 413.5731 -171.308)" style="fill:#FFCD00;" width="66.329" height="30"/><rect x="65.262" y="83.427" transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.4267 -40.7695)" style="fill:#FFED94;" width="66.329" height="30"/><rect x="428.702" y="326.261" transform="matrix(0.9239 0.3827 -0.3827 0.9239 165.7562 -150.7744)" style="fill:#FFCD00;" width="66.332" height="30.001"/><rect x="16.963" y="155.725" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 31.1066 347.638)" style="fill:#FFED94;" width="66.332" height="30.001"/><polygon style="fill:#DCE4EC;" points="321.78,408.309 256,408.309 235.984,460.154 256,512 321.78,512 "/><rect x="190.22" y="408.31" style="fill:#F7F7F8;" width="65.78" height="103.69"/></svg>
+            </label>
         </div>
 
         <div class="lamp lamp_3">
-            <input type="checkbox" class="custom_checkbox" id="lamp3">
-            <label for="lamp3"><img class="checkbox__img" src="img/lamp.svg" alt="Lamp"></label>
+            <input type="checkbox" class="checkbox" id="lamp3">
+            <label for="lamp3"><img class="checkbox__img">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path style="fill:#FFCD00;" d="M256,131.38l-20.016,296.944l85.796-20.016v-46.455c35.324-21.998,58.84-61.177,58.84-105.854 C380.62,187.175,324.825,131.38,256,131.38z"/><path style="fill:#FFED94;" d="M131.38,256c0,44.677,23.516,83.856,58.84,105.854v46.455L256,428.325V131.38 C187.175,131.38,131.38,187.175,131.38,256z"/><polygon style="fill:#FF8E00;" points="288.527,233.022 256,265.549 245.992,418.317 271,408.309 271,292.975 309.74,254.235 "/><polygon style="fill:#FFCD00;" points="223.473,233.022 202.26,254.235 241,292.975 241,408.309 256,418.317 256,265.549 "/><rect y="241" style="fill:#FFED94;" width="66.33" height="30"/><rect x="445.67" y="241" style="fill:#FFCD00;" width="66.33" height="30"/><rect x="16.961" y="326.275" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 227.0415 637.3885)" style="fill:#FFED94;" width="66.332" height="30.001"/><rect x="428.693" y="155.731" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -30.179 189.7457)" style="fill:#FFCD00;" width="66.332" height="30.001"/><rect x="83.432" y="380.414" transform="matrix(0.7071 0.7071 -0.7071 0.7071 321.2741 51.5324)" style="fill:#FFED94;" width="30" height="66.329"/><g><rect x="398.562" y="65.264" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 636.3948 460.4608)" style="fill:#FFCD00;" width="30" height="66.329"/><rect x="326.274" y="16.958" transform="matrix(0.9239 0.3827 -0.3827 0.9239 45.1608 -126.7868)" style="fill:#FFCD00;" width="30.001" height="66.332"/><rect x="241" style="fill:#FFCD00;" width="30" height="66.33"/></g><rect x="137.563" y="35.122" transform="matrix(0.3827 0.9239 -0.9239 0.3827 151.6994 -126.7912)" style="fill:#FFED94;" width="66.332" height="30.001"/><rect x="380.409" y="398.573" transform="matrix(0.7071 0.7071 -0.7071 0.7071 413.5731 -171.308)" style="fill:#FFCD00;" width="66.329" height="30"/><rect x="65.262" y="83.427" transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.4267 -40.7695)" style="fill:#FFED94;" width="66.329" height="30"/><rect x="428.702" y="326.261" transform="matrix(0.9239 0.3827 -0.3827 0.9239 165.7562 -150.7744)" style="fill:#FFCD00;" width="66.332" height="30.001"/><rect x="16.963" y="155.725" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 31.1066 347.638)" style="fill:#FFED94;" width="66.332" height="30.001"/><polygon style="fill:#DCE4EC;" points="321.78,408.309 256,408.309 235.984,460.154 256,512 321.78,512 "/><rect x="190.22" y="408.31" style="fill:#F7F7F8;" width="65.78" height="103.69"/></svg>
+            </label>
         </div>
 
-        <h1 class="counter-info"></h1>
+        <h1 class="counter-info">Total: </h1>
     </div>
-
 </body>
-
 </html>
