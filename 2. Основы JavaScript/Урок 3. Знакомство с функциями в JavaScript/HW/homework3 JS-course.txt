@@ -37,4 +37,4 @@ const subtract = (a, b) => a > b ? a - b : b - a;
 const multiply = (a, b) => a * b;
 const divide = (a, b) => b === 0 ? 0 : a / b;
 
-console.log(add(2, 6)); // 8
+console.log(add(2, 6)); 
