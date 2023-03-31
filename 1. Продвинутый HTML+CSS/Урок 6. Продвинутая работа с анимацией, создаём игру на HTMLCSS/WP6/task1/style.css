@@ -25,93 +25,92 @@ body {
 .counter-info {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 50px;
   color: white;
 }
 
-.counter-info::before {
+.counter-info::after {
   content: counter(count);
 }
 
-.custom_checkbox {
+.checkbox {
   position: absolute;
   visibility: hidden;
   left: -9999999px;
 }
-.custom_checkbox:checked {
+.checkbox:checked {
   counter-increment: count;
 }
-.custom_checkbox:checked + label {
+.checkbox:checked + label {
   display: none;
 }
 
 .lamp {
   position: absolute;
-  left: -50px;
+  left: -100px;
 }
 .lamp_1 {
-  animation: lampFromHell-1 3s linear 0s 1 normal forwards;
+  animation: lampFromHell-1 3s 1s;
+  animation-timing-function: step-end;
 }
 .lamp_2 {
-  animation: lampFromHell-2 3s linear 0s 1 normal forwards;
+  animation: lampFromHell-2 3s 2s;
+  animation-timing-function: step-end;
 }
 .lamp_3 {
-  animation: lampFromHell-3 3s linear 0s 1 normal forwards;
+  animation: lampFromHell-3 3s 3s;
+  animation-timing-function: step-end;
 }
 
 @keyframes lampFromHell {
   0% {
-    left: -50px;
-    top: 88vh;
+    left: -100px;
+    display: block;
   }
   50% {
-    left: 1vw;
-    top: 6vh;
+    left: 44vw;
+    top: 49vh;
   }
   100% {
-    left: 100vw;
-    top: 19vh;
+    display: none;
   }
 }
 @keyframes lampFromHell-1 {
   0% {
-    left: -50px;
-    top: 19vh;
+    left: -100px;
+    display: block;
   }
   50% {
-    left: 44vw;
-    top: 44vh;
+    left: 59vw;
+    top: 21vh;
   }
   100% {
-    left: 100vw;
-    top: 79vh;
+    display: none;
   }
 }
 @keyframes lampFromHell-2 {
   0% {
-    left: -50px;
-    top: 68vh;
+    left: -100px;
+    display: block;
   }
   50% {
-    left: 58vw;
-    top: 54vh;
+    left: 41vw;
+    top: 84vh;
   }
   100% {
-    left: 100vw;
-    top: 51vh;
+    display: none;
   }
 }
 @keyframes lampFromHell-3 {
   0% {
-    left: -50px;
-    top: 88vh;
+    left: -100px;
+    display: block;
   }
   50% {
-    left: 35vw;
-    top: 87vh;
+    left: 54vw;
+    top: 38vh;
   }
   100% {
-    left: 100vw;
-    top: 23vh;
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
