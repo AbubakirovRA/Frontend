@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+</head>
+
+<body>
+    <div class="content"></div>
+
+    <script>
+        const contentElement = document.querySelector('.content');
+
+        function sequence() {
+            let callNumber = 0;
+            return function () {
+                return ++callNumber;
+            }
+        }
+
+        const newButton = document.createElement('button');
+        newButton.textContent = 'Пуск!';
+        contentElement.appendChild(newButton);
+
+        // let count = 0;
+        // newButton.addEventListener('click', () => {
+        //     count++;
+        //     console.log(`Запущено: ${count} раз`);
+        // });
+
+        const count = sequence();
+        newButton.addEventListener('click', () => {
+            console.log('Количество нажатий:', count());
+        });
+    </script>
+</body>
+
+</html>

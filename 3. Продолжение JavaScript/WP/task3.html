@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dtask3</title>
+</head>
+
+<body>
+    <div class="content"></div>
+
+    <script>
+
+        const contentElement = document.querySelector('.content');
+
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'Новый текстовый элемент';
+        contentElement.appendChild(newParagraph);
+
+        // contentElement.removeChild(newParagraph);
+
+        const newImage = document.createElement('img');
+        newImage.src = 'https://picsum.photos/200';
+        newImage.alt = 'Это каритинка';
+        contentElement.appendChild(newImage);
+
+
+        const newHeading = document.createElement('h2');
+        newHeading.textContent = 'Заголовок';
+        contentElement.appendChild(newHeading);
+
+
+        const newParagraph2 = document.createElement('p');
+        newParagraph2.textContent = 'Еще один текстовый элемент';
+        contentElement.appendChild(newParagraph2);
+    </script>
+</body>
+
+</html>

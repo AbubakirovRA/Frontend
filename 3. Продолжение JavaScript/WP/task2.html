@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+
+<body>
+    <p>
+        1. Дан тег
+        <a class="link" href="#">link text html</a>
+
+        a. Вам необходимо поменять текст внутри ссылки на “link text js”
+
+        b. Заменить href, на значение https://developer.mozilla.org/ru/
+
+        2. Дан тег <img class="photo" src="" alt="">
+        Вам необходимо с помощью js поменять значение src на любое изображение из интернета
+    </p>
+
+    <a class="link" href="#">link text html</a>
+    <img class="photo" src="" alt="">
+    <script>
+
+        const linkElement = document.querySelector('.link');
+        linkElement.textContent = 'link text js';
+
+
+        linkElement.href = 'https://developer.mozilla.org/ru/';
+
+
+        const imgElement = document.querySelector('.photo');
+        imgElement.src = 'https://picsum.photos/200';
+    </script>
+</body>
+
+</html>

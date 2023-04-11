@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+
+<body>
+    <p>Задание 5 <br>
+        1. Дан тег `
+    <div class="content"></div>` <br>
+    2. Создайте с помощью javascript новый элемент button<br>
+    3. Добавьте текст для кнопки “Отправить”<br>
+    4. При клике на данную кнопку необходимо чтобы текст поменялся на “Текст отправлен”<br>
+    5. Создать вторую кнопку, при клике на которую должен появляться параграф с произвольным текстом. <br>
+    6. При нажатии на вторую кнопку еще раз, текст должен пропадать.<br>
+    </p>
+
+
+    <script>
+        const contentElement = document.querySelector('.content');
+
+        const sendButton = document.createElement('button');
+        sendButton.textContent = 'Отправить';
+        contentElement.appendChild(sendButton);
+        sendButton.addEventListener('click', () => {
+            sendButton.textContent = 'Текст отправлен';
+        });
+
+        const newButton = document.createElement('button');
+        newButton.textContent = 'Показать текст';
+        contentElement.appendChild(newButton);
+
+        const textParagraph = document.createElement('p');
+        textParagraph.textContent = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, sed ut? Veniam quasi reprehenderit cupiditate commodi tempora similique quibusdam atque dicta. Qui aut incidunt ex ullam architecto iste omnis harum.';
+        textParagraph.style.display = 'none';
+        contentElement.appendChild(textParagraph);
+
+        newButton.addEventListener('click', () => {
+            if (textParagraph.style.display === 'none') {
+                textParagraph.style.display = 'block';
+                newButton.textContent = 'Скрыть текст';
+            } else {
+                textParagraph.style.display = 'none';
+                newButton.textContent = 'Показать текст';
+            }
+        });
+
+    </script>
+</body>
+
+</html>

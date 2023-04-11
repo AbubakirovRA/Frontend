@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+<div id="block">
+ <p>1</p>
+ <p>2</p>
+</div>
+Получите ссылку на первый абзац из дива с id, равным block, выведите его в консоль
+Получите ссылку на первый абзац с классом www. и вывести его в консоль
+<p class="www">text 1</p>
+<p class="www">text 2</p> 
+-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+
+<body>
+    <div id="block">
+        <p>1</p>
+        <p>2</p>
+    </div>
+    <script>
+        const firstParagraph1 = document.querySelector("#block p:first-of-type");
+        console.log(firstParagraph1);
+
+        const firstWwwParagraph2 = document.querySelector(".www:first-of-type");
+        console.log(firstWwwParagraph2);
+
+        // Используя getElementById(), getElementsByTagName(), getElementsByClassName():
+
+        const blockDiv = document.getElementById("block");
+        const firstParagraph3 = blockDiv.getElementsByTagName("p")[0];
+        console.log(firstParagraph3);
+
+        const wwwParagraphs = document.getElementsByClassName("www");
+        const firstWwwParagraph4 = wwwParagraphs[0];
+        console.log(firstWwwParagraph4);
+        // методе getElementById() передается только id элемента, а в методе getElementsByClassName() класс указывается без точки.
+    </script>
+</body>
+
+</html>
