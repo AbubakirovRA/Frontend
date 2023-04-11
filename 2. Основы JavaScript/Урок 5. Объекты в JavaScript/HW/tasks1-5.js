@@ -67,23 +67,23 @@ const post = {
 // Для вывода значений из объекта в консоль можно использовать следующие способы:
 
 // Решение 1. Используя точку(.) и квадратные скобки([]):
-console.log(post.author); // "John"
-console.log(post.comments[0].rating.dislikes); // 2
-console.log(post.comments[1].userId); // 5
-console.log(post.comments[1].text); // "lorem ipsum 2"
+console.log(post.author); 
+console.log(post.comments[0].rating.dislikes); 
+console.log(post.comments[1].userId); 
+console.log(post.comments[1].text);
 
 // Решение 2. Используя деструктуризацию:
 const { author, comments } = post;
-console.log(author); // "John"
-console.log(comments[0].rating.dislikes); // 2
-console.log(comments[1].userId); // 5
-console.log(comments[1].text); // "lorem ipsum 2"
+console.log(author); 
+console.log(comments[0].rating.dislikes); 
+console.log(comments[1].userId); 
+console.log(comments[1].text); 
 
 // Решение 3. Используя Object.values():
-console.log(Object.values(post)[0]); // "John"
-console.log(Object.values(post.comments[0].rating)[1]); // 2
-console.log(Object.values(post.comments[1])[0]); // 5
-console.log(Object.values(post.comments[1])[1]); // "lorem ipsum 2"
+console.log(Object.values(post)[0]); 
+console.log(Object.values(post.comments[0].rating)[1]); 
+console.log(Object.values(post.comments[1])[0]); 
+console.log(Object.values(post.comments[1])[1]); 
 
 // Задание 3
 // Дан массив products, необходимо цену каждого продукта уменьшить на 15 % используя метод forEach.
@@ -144,12 +144,10 @@ const products = [
 const productWithPhoto = products.filter((product) => {
     return product.photos && product.photos.length > 0;
 });
-
 console.log(productWithPhoto);
 
 // Решение п.2
 products.sort((a, b) => a.price - b.price);
-
 console.log(products);
 
 // ** Задание 5 **
