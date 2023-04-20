@@ -1,0 +1,38 @@
+<!--
+Задание 1 (тайминг 15 минут)
+
+В html создать кнопку button
+После загрузки страницы вывести в консоль текст “страница загрузилась”
+Добавить событие onclick которое выводит в консоль текст “событие onclick”
+Добавить событие addEventListener которое выводит в консоль текст “событие addEventListener”
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+</head>
+
+<body>
+    <button class="btn">Нажать</button>
+    <script>
+        window.addEventListener('load', () => {
+            console.log('страница загрузилась');
+        });
+
+        document.querySelector('.btn').onclick = () => {
+            console.log('событие onclick');
+        };
+
+        const button = document.querySelector('.btn');
+        button.addEventListener('click', () => {
+            console.log('событие addEventListener');
+        });
+    </script>
+</body>
+
+</html>

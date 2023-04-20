@@ -1,0 +1,57 @@
+<!-- 
+Создать в html список состоящий из 3-х произвольных элементов li
+Нужно создать кнопку которая будет добавлять элементы списка с текстом “новый элемент списка”
+Создать кнопку, которая будет удалять первый элемент из созданного списка
+Создать кнопку, при клике на которую ей добавляется класс “click”
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add-remove li</title>
+</head>
+
+<body>
+    
+    <ul class="list">
+        <li>Элемент 1</li>
+        <li>Элемент 2</li>
+        <li>Элемент 3</li>
+    </ul>
+
+    <button class="addButton">Добавить элемент</button>
+    <button class="deleteButton">Удалить первый элемент</button>
+    <button class="clickButton">Добавить класс "click"</button>
+
+    <script>
+        const list = document.querySelector(".list");
+        const addButton = document.querySelector(".addButton");
+        const deleteButton = document.querySelector(".deleteButton");
+        const clickButton = document.querySelector(".clickButton");
+
+        addButton.addEventListener("click", () => {
+            const newElement = document.createElement("li");
+            newElement.textContent = "Новый элемент списка";
+            list.appendChild(newElement);
+        });
+
+        deleteButton.addEventListener("click", () => {
+            const firstElement = list.querySelector("li:first-child");
+            if (firstElement) {
+                // list.removeChild(firstElement);
+                firstElement.remove();
+            }
+        });
+
+        clickButton.addEventListener("click", () => {
+            clickButton.classList.add("click");
+        });
+    </script>
+</body>
+
+</html>

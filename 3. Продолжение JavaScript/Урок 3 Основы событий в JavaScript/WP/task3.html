@@ -1,0 +1,55 @@
+<!-- 
+Создать кнопку, которая добавляет заголовок h1 с текстом,
+“Новый заголовок", данный элемент нужно расположить после кнопки
+Создать вторую кнопку, которая будет удалять созданный заголовок h1
+Создать третью кнопку, при наведении на которую в консоль будет выводиться текст 
+“вы навели на данную кнопку” , как только вы убираем курсор мыши с кнопки, 
+в консоли должен появиться текст “Наведения на кнопку больше нет”
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="add-btn">Добавить заголовок</button>
+    <button class="remove-btn">Удалить заголовок</button>
+    <button class="hover-btn">Наведите на кнопку</button>
+
+    <script>
+        const addBtn = document.querySelector('.add-btn');
+        const removeBtn = document.querySelector('.remove-btn');
+        const hoverBtn = document.querySelector('.hover-btn');
+        const body = document.querySelector('body');
+        let h1;
+
+        addBtn.addEventListener('click', () => {
+            h1 = document.createElement('h1');
+            h1.textContent = 'Новый заголовок';
+            body.insertBefore(h1, addBtn.nextSibling);
+            // addBtn.insertAdjacentElement('beforebegin', h1);
+        });
+
+        removeBtn.addEventListener('click', () => {
+            if (h1) {
+                h1.remove();
+            }
+        });
+
+        hoverBtn.addEventListener('mouseover', () => {
+            console.log('Вы навели на данную кнопку');
+        });
+
+        hoverBtn.addEventListener('mouseout', () => {
+            console.log('Наведения на кнопку больше нет');
+        });
+    </script>
+</body>
+
+</html>

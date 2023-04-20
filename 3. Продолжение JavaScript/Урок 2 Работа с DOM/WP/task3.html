@@ -1,0 +1,39 @@
+<!-- Задание 3 (тайминг 20 минут)
+С помощью querySelector найти элемент h2 и вывести в
+консоль всех его родителей -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3 WP2</title>
+</head>
+
+<body>
+    <div class="item">
+        <div class="elem">
+            <div class="info">
+                <h2 class="subtitle">Lorem, ipsum dolor.</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let h2Element = document.querySelector('h2').parentElement;
+        // let parent = h2Element.parentNode;
+
+        while (h2Element) {
+            console.log(h2Element);
+            h2Element = h2Element.parentElement;
+            // if (parent.tagName === 'body'){
+            //     break;
+            // }
+            // parent = parent.parentNode;
+        }
+    </script>
+</body>
+
+</html>
