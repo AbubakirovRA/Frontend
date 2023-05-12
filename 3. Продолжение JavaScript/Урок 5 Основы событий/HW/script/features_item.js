@@ -19,7 +19,7 @@ fetch('./json/featured_items.json')
 
       const img = document.createElement('img');
       img.src = item.image;
-      img.alt = item.title;
+      img.alt = item.name;
 
       imgLink.appendChild(img);
       productImg.appendChild(imgLink);
@@ -29,7 +29,7 @@ fetch('./json/featured_items.json')
 
       const heading = document.createElement('p');
       heading.classList.add('product__heading');
-      heading.textContent = item.title;
+      heading.textContent = item.name;
 
       const text = document.createElement('p');
       text.classList.add('product__text');
@@ -37,7 +37,7 @@ fetch('./json/featured_items.json')
 
       const price = document.createElement('p');
       price.classList.add('product__price');
-      price.textContent = item.price;
+      price.textContent = '$' + item.price.toFixed(2);
 
       productContent.appendChild(heading);
       productContent.appendChild(text);
@@ -48,10 +48,11 @@ fetch('./json/featured_items.json')
 
       productBoxContent.appendChild(productCard);
     });
-  })
+  });
 
 // Обработка данных после загрузки JSON-файла
 function handleJSONLoad() {
+  const featuredItems = data.featuredItems;
   if (typeof featuredItems !== 'undefined') {
     handleData(featuredItems);
   }
