@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #222222;
+  align-items: center;
+  padding-left: 231px;
+  padding-right: 240px;
+}
+
+.header_icon:hover,
+.logo_icon:hover,
+.search_icon:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.header_icon:active path,
+.search_icon:active path {
+  fill: crimson;
+}
+
+.header {
+  position: relative;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding-left: 32px;
+    padding-right: 41px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header__reg {
+    display: none;
+  }
+  .header__cart {
+    display: none;
+  }
+}/*# sourceMappingURL=header__header.css.map */
