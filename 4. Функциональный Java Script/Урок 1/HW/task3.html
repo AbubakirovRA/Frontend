@@ -21,20 +21,21 @@ console.log(targetElement);
 </head>
 
 <body>
+    <div class="root"></div>
     <script>
         function findElementByClass(rootElement, className) {
+            if (rootElement === null) {
+                return null;
+            }
+
             if (rootElement.classList.contains(className)) {
                 return rootElement;
             }
 
-            const childNodes = rootElement.childNodes;
-            for (let i = 0; i < childNodes.length; i++) {
-                const childElement = childNodes[i];
-                if (childElement.nodeType === 1) {
-                    const foundElement = findElementByClass(childElement, className);
-                    if (foundElement) {
-                        return foundElement;
-                    }
+            for (let i = 0; i < rootElement.children.length; i++) {
+                const foundElement = findElementByClass(rootElement.children[i], className);
+                if (foundElement !== null) {
+                    return foundElement;
                 }
             }
 
