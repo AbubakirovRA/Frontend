@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+</head>
+
+<body>
+    <label>
+        Введите заголовок:
+        <!-- <input type="text" class="titleInput" oninput="changeTitle()"> -->
+        <input type="text" class="titleInput">        
+    </label>
+    <h1 class="title">Мои покупки</h1>
+    <input type="button" name="addItem" class="addItemBtn" value="Добавить в список">
+    <ul class="shoppingList">Список покупок:</ul>
+    <br>
+
+</body>
+
+<script>
+    // function changeTitle() {
+    //     const titleInput = document.querySelector('.titleInput');
+    //     const title = document.querySelector('.title');
+    //     title.innerHTML = titleInput.value;
+    // }
+
+    const titleInput = document.querySelector('.titleInput');
+    const title = document.querySelector('.title');
+    const addItemBtn = document.querySelector('.addItemBtn');
+    const shoppingList = document.querySelector('.shoppingList');
+
+    titleInput.addEventListener('input', (e) => {
+        e.preventDefault();
+        // title.innerHTML = titleInput.value;
+        title.textContent = titleInput.value;
+    });
+
+    addItemBtn.addEventListener('click', ()=>{
+        const li = document.createElement('li');
+        li.textContent = titleInput.value;
+        shoppingList.appendChild(li);
+        titleInput.value = '';
+    });
+
+</script>
+
+</html>

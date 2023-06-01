@@ -1,0 +1,50 @@
+<!-- 
+Напишите рекурсивную функцию findElementByClass,
+которая принимает корневой элемент дерева DOM 
+и название класса в качестве аргументов 
+и возвращает первый найденный элемент с указанным классом в этом дереве.
+
+Пример
+const rootElement = document.getElementById('root');
+const targetElement = findElementByClass(rootElement, 'my-class');
+console.log(targetElement);
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+
+<body>
+    <script>
+        function findElementByClass(rootElement, className) {
+            if (rootElement.classList.contains(className)) {
+                return rootElement;
+            }
+
+            const childNodes = rootElement.childNodes;
+            for (let i = 0; i < childNodes.length; i++) {
+                const childElement = childNodes[i];
+                if (childElement.nodeType === 1) {
+                    const foundElement = findElementByClass(childElement, className);
+                    if (foundElement) {
+                        return foundElement;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        const rootElement = document.getElementById('root');
+        const targetElement = findElementByClass(rootElement, 'my-class');
+        console.log(targetElement);
+    </script>
+</body>
+
+</html>

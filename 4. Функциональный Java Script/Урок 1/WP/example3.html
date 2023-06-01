@@ -1,0 +1,26 @@
+<!-- Напишите функцию getEvenNumbers, которая принимает массив
+чисел в качестве аргумента и возвращает новый массив,
+содержащий только четные числа. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example3</title>
+</head>
+
+<body>
+    <script>
+        function getEvenNumbers(numbers) {// получаем массив
+            return numbers.filter((num) => num % 2 === 0);//метод filter возвращает массив с четными
+        }
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(getEvenNumbers(numbers));
+    </script>
+</body>
+
+</html>

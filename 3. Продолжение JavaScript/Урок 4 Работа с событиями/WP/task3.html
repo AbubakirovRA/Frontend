@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 3</title>
+</head>
+
+<body>
+    <form>
+        <label>
+            <input type="password" class="pswdInput">
+            Введите пароль
+            <br>
+            <input type="button" value="Отправить" class="checkBtn">
+        </label>
+    </form>
+
+    <script>
+        const pswdInput = document.querySelector('.pswdInput');
+        const pswdSend = document.querySelector('.checkBtn');
+
+        pswdSend.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pswdValue = pswdInput.value;
+            if (pswdValue === "пароль") {
+                pswdInput.style.border = "2px solid green";
+            } else {
+                pswdInput.style.border = "2px solid red";
+                pswdInput.value = "";
+                // alert("Пароль неверный");
+                const titleEl = document.createElement('h2');
+                titleEl.textContent = 'Пароль не верный';
+                document.body.appendChild(titleEl);
+            }
+        });
+    </script>
+</body>
+
+</html>

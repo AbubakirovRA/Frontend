@@ -1,0 +1,47 @@
+<!-- 
+Напишите функцию createCounter, 
+которая создает счетчик 
+и возвращает объект с двумя методами: increment и decrement. 
+Метод increment должен увеличивать значение счетчика на 1, 
+а метод decrement должен уменьшать значение счетчика на 1. 
+Значение счетчика должно быть доступно только через методы объекта, а не напрямую.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+
+<body>
+    <script>
+        function createCounter() {
+            let count = 0;
+
+            return {
+                increment: function () {
+                    count++;
+                },
+                decrement: function () {
+                    count--;
+                },
+                getCount: function () {
+                    return count;
+                }
+            };
+        }
+
+        const counter = createCounter();
+        counter.increment();
+        counter.increment();
+        console.log(counter.getCount()); 
+        counter.decrement();
+        console.log(counter.getCount()); 
+    </script>
+</body>
+
+</html>

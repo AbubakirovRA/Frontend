@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/cart_style.css">
+    <script src="data.js"></script>
+    <title>Cart</title>
+</head>
+
+<body>
+    <section class="products_add">
+        <div class="products_add__card">
+            <img class="products_add__card__close_icon" src="img/cross.svg" alt="cross">
+            <div class="products_add__card__left">
+                <a href="#">
+                    <img class="products_add__card__left__cart-img" src="img/product3.svg" alt="product3">
+                </a>
+            </div>
+            <div class="products_add__card__right">
+                <a class="products_add__card__right__tittle">MANGO PEOPLE T-SHIRT</a>
+                <p class="products_add__card__right__text">Price: <span
+                        class="products_add__card__right__text__color">300$</span>
+                </p>
+                <p class="products_add__card__right__text">Color: Red</p>
+                <p class="products_add__card__right__text">Size: XL</p>
+                <div class="products_add__card__right__quantity">
+                    <label class="products_add__card__right__quantity__label" for="quantity">Quantity:</label>
+                    <input class="products_add__card__right__quantity__input" type="number" id="quantity"
+                        name="quantity" min="1" max="100" placeholder="1">
+                </div>
+            </div>
+        </div>
+        <div class="products_add__card">
+            <img class="products_add__card__close_icon" src="img/cross.svg" alt="cross">
+            <div class="products_add__card__left">
+                <a href="#">
+                    <img class="products_add__card__left__cart-img" src="img/product2.jpg" alt="product2">
+                </a>
+            </div>
+            <div class="products_add__card__right">
+                <a class="products_add__card__right__tittle">MANGO PEOPLE<br>T-SHIRT</a>
+                <p class="products_add__card__right__text">Price: <span
+                        class="products_add__card__right__text__color"></span>
+                </p>
+                <p class="products_add__card__right__text">Color: Red</p>
+                <p class="products_add__card__right__text">Size: XL</p>
+                <div class="products_add__card__right__quantity">
+                    <label class="products_add__card__right__quantity__label" for="quantity">Quantity:</label>
+                    <input class="products_add__card__right__quantity__input" type="number" id="quantity"
+                        name="quantity" min="1" max="100" placeholder="1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const productsContainer = document.querySelector('.products');
+
+        dataProducts.forEach(product => {
+            const productBlock = document.createElement('div');
+            productBlock.classList.add('product');
+
+            const productImage = document.createElement('img');
+            productImage.src = product.Image;
+            productImage.alt = product.Name;
+            productBlock.appendChild(productImage);
+
+            const productName = document.createElement('h3');
+            productName.textContent = product.Name;
+            productBlock.appendChild(productName);
+
+            const productPrice = document.createElement('p');
+            productPrice.classList.add('price');
+            productPrice.textContent = `$${product.Price}`;
+            productBlock.appendChild(productPrice);
+
+            productsContainer.appendChild(productBlock);
+        });
+    </script>
+</body>
+
+</html>
+
+<script>
+    let data = JSON.parse(data);
+    console.log(data);
+
+    data.forEach(elem => {
+        console.log(elem.name);
+    });
+</script>

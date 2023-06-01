@@ -1,0 +1,11 @@
+.title {
+    color: red;
+}
+
+.title + p {
+    color: green;
+}
+
+.img {
+    margin-top: 12pxq;
+}

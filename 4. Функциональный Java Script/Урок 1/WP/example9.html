@@ -1,0 +1,34 @@
+<!-- Напишите рекурсивную функцию sumDigits, которая принимает
+положительное целое число в качестве аргумента и возвращает
+сумму его цифр.
+// Пример использования:
+console.log(sumDigits(123)); // Ожидаемый результат: 6 (1 + 2 + 3)
+console.log(sumDigits(456789)); // Ожидаемый результат: 39 (4 + 5 + 6
++ 7 + 8 + 9) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example9</title>
+</head>
+
+<body>
+    <script>
+        function sumDigits(number) {
+            if (number < 10) { //eсли число меньше 10, возвращается само число.
+                return number;
+            } else {
+                return number % 10 + sumDigits(Math.floor(number / 10));// суммируем единицы и десятки, пока число не станет меньше 10
+            }
+        }
+
+        console.log(sumDigits(123)); 
+        console.log(sumDigits(12345));
+    </script>
+</body>
+
+</html>

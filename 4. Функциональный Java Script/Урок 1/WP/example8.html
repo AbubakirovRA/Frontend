@@ -1,0 +1,37 @@
+<!-- Задача: Напишите функцию createPasswordChecker, которая
+принимает допустимую длину пароля в качестве аргумента и
+возвращает функцию для проверки введенного пароля.
+Возвращаемая функция должна принимать пароль и возвращать
+true, если его длина соответствует допустимой, и false в противном
+случае.
+// Пример использования:
+const isPasswordValid = createPasswordChecker(8);
+console.log(isPasswordValid('password')); // Ожидаемый результат:
+false
+console.log(isPasswordValid('secret')); // Ожидаемый результат: true -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example8</title>
+</head>
+
+<body>
+    <script>
+        function createPasswordChecker(pswLength) {
+            return function (password) {
+                return password.length === pswLength;
+            }
+        }
+
+        const isPasswordValid = createPasswordChecker(8);
+        console.log(isPasswordValid('password')); 
+        console.log(isPasswordValid('secret')); 
+    </script>
+</body>
+
+</html>

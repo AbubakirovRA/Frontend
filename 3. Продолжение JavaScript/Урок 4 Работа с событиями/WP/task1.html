@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+
+<body>
+    <!-- <form>
+        <label>
+            <input type="checkbox" class="agree">
+            Согласен с условиями
+        </label>
+        <br>
+
+        <input type="button" value="Отправить" onclick="checkAgreement()">
+        <p class="error" style="color: red; display: none;">Необходимо согласиться с условиями</p>
+    </form> -->
+    <input type="button" value="Согласен с условиями" class="btn">
+    <input type="checkbox" value="Согласен с условиями" class="check">
+
+    <!-- <script>
+        function checkAgreement() {
+            const agreement = document.querySelector('.agree');
+            const error = document.querySelector('.error');
+
+            if (!agreement.checked) {
+                error.style.display = "block";
+            } else {
+                error.style.display = "none";
+
+            }
+        }
+    </script> -->
+
+    <script>
+        const btn = document.querySelector('.btn');
+        const chkBox = document.querySelector('.check');
+        btn.addEventListener('click', function () {
+            if (!chkBox.checked) {
+                const h2El = document.createElement('h2');
+                h2El.textContent = 'Необходимо согласиться с условиями';
+                h2El.style.color = 'red';
+                document.body.appendChild(h2El);
+            }
+        })
+    </script>
+</body>
+
+</html>

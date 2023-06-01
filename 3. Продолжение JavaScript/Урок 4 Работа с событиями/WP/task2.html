@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2</title>
+</head>
+
+<body>
+    <form>
+        <label>
+            <input type="radio" name="drink" class="tea" value="tea"> Чай
+            <br>
+            <input type="radio" name="drink" class="cofee" value="cofee"> Кофе
+        </label>
+        <br>
+        <label>
+            <input type="button" value="Отправить" class="btn">
+        </label>
+    </form>
+      
+    <script>
+        const btn = document.querySelector('.btn');
+        const tea = document.querySelector('.tea');
+        const cofee = document.querySelector('.cofee');
+        btn.addEventListener('click', () => {
+            if (tea.checked) {
+                const titleEl = document.createElement('h2');
+                titleEl.textContent = 'Чай закончился';
+                document.body.appendChild(titleEl);
+            }else if (cofee.checked){
+                const titleEl = document.createElement('h2');
+                titleEl.textContent = 'Кофе закончился';
+                document.body.appendChild(titleEl);
+            }else{
+                const titleEl = document.createElement('h2');
+                titleEl.textContent = 'Сделайте выбор';
+                document.body.appendChild(titleEl);
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Example Lecture1</title>
+</head>
+
+<body>
+    <h1 class="title">Lorem, ipsum dolor.</h1>
+    <h2 id="heading">Lorem ipsum dolor sit amet.</h2>
+    <h3 class="subtitle">текст</h3>
+    <ul class="ul">
+        <li class="list">text 1</li>
+        <li class="list">text 2</li>
+        <li class="list">text 3</li>
+    </ul>
+    <p class="text">Lorem, ipsum dolor.1</p>
+    <p class="text">Lorem, ipsum dolor.2</p>
+    <p class="text">Lorem, ipsum dolor.3</p>
+
+    <!-- <script src="/script.js"></script> -->
+    <script>
+        // создание нового елемента и изменение в нем текста
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'Измененный текст параграфа';
+     
+        // поиск элемента h3 и замена текстового содержимого в нем
+        const textSubtitle = document.querySelector('.subtitle');
+        textSubtitle.textContent ='Новый текст';
+        // Вставка нового параграфа после заголовка h3
+        textSubtitle.appendChild(newParagraph);
+
+        // поиск элемента при помощи getElementsByClassName
+        const listElements = document.getElementsByClassName('list');
+        console.log(listElements);
+
+        // поиск элемента при помощи querySelectorAll
+        const listElementsQS = document.querySelectorAll('.list');
+        console.log(listElementsQS);
+
+        // поиск элемента при помощи getElementsByTagName
+        const listElementsTN = document.getElementsByTagName('li');
+        console.log(listElementsTN); 
+
+
+        // поиск элемента при помощи getElementsById
+        // const heading2 = document.getElementById('heading');
+        // console.log(heading2);
+
+        // поиск элемента при помощи querySelector
+        const heading3 = document.querySelector('.heading');
+        console.log(heading3);
+
+        const heading = document.querySelector('.title');
+        const text = document.querySelector('.title + p');
+        const textAll = document.querySelectorAll('.text');
+
+
+        // вывод в консоль сформированного псевдомассива textAll при помощи
+        // цикла for i
+        // for (let index = 0; index < textAll.length; index++) {
+        //     console.log(textAll[index]);
+            
+        // }
+
+        // вывод в консоль сформированного псевдомассива textAll при помощи
+        // цикла foreach
+        // textAll.forEach(element => {
+        //     console.log(element);
+        // });
+
+        // console.log(heading);
+        // console.log(text);
+        // console.log(textAll);
+ 
+        // удаление заголовка h2
+        const heading2 = document.querySelector('#heading');
+        heading2.remove();
+
+        // создание и замена параграфа
+        const divElement = document.createElement('div');
+        const paragraphElement = document.createElement('p');
+        divElement.appendChild(paragraphElement);
+
+        const spanElement = document.createElement('span');
+        const strongElement = document.createElement('strong');
+        paragraphElement.replaceWith(spanElement, strongElement);
+
+        console.log(divElement.outerHTML);
+
+        
+    </script>
+</body>
+
+</html>
