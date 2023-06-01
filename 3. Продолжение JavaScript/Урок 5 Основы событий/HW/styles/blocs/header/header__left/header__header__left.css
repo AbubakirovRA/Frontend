@@ -1,0 +1,7 @@
+.header__left {
+  display: flex;
+  gap: 41px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+}/*# sourceMappingURL=header__header__left.css.map */
