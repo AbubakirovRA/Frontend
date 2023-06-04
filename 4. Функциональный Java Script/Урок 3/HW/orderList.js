@@ -41,6 +41,7 @@ class Order {
             totalPrice += product.price;
         });
         return totalPrice;
+        // return this.products.reduce((previousValue, currentValue) => previousValue.price += currentValue.price);
     }
 }
 
