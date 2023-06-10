@@ -1,0 +1,75 @@
+<!-- 
+""Изменение стиля элемента через заданное время""
+
+Напишите функцию changeStyleDelayed, 
+которая принимает идентификатор элемента и время задержки (в миллисекундах) 
+в качестве аргументов. 
+
+Функция должна изменить стиль элемента через указанное время.
+
+// Пример использования функции
+changeStyleDelayed('myElement', 2000); // Через 2 секунды изменяет стиль элемента с id 'myElement'"
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Style Delayed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .messageContainer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .message {
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .message.success {
+            color: green;
+        }
+
+        .message.error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Change Style Delayed</h1>
+    <div class="messageContainer">
+        <p class="message">Initial Style</p>
+    </div>
+
+    <script>
+        function changeStyleDelayed(elementId, delay) {
+            setTimeout(() => {
+                const element = document.querySelector('.' + elementId);
+
+                element.style.color = 'red';
+                element.textContent = 'Style Changed!';
+                element.classList.add('success');
+            }, delay);
+        }
+
+        changeStyleDelayed('messageContainer', 3000);
+    </script>
+</body>
+
+</html>

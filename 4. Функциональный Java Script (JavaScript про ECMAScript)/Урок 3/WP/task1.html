@@ -1,0 +1,48 @@
+<!-- 
+Напишите функцию getPrototypeChain(obj), которая будет
+возвращать цепочку прототипов для заданного объекта
+obj. Функция должна вернуть массив прототипов, начиная
+от самого объекта и заканчивая глобальным объектом
+Object.prototype.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getPrototypeChain(obj) {
+            const prototypeChain = [];
+            let currentObj = obj;
+
+            while (currentObj !== null) {
+                prototypeChain.push(currentObj);
+                currentObj = Object.getPrototypeOf(currentObj);
+            }
+
+            return prototypeChain;
+        }
+
+        function Person(name) {
+            this.name = name;
+        }
+
+        Person.prototype.sayHello = function () {
+            console.log("Hello!");
+        };
+
+        const person = new Person("John");
+        
+        const prototypeChain = getPrototypeChain(person);
+        console.log(prototypeChain);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!-- 
+ Задание 3 (call, apply 20 минут)
+Напишите конструктор объекта BankAccount, который будет
+представлять банковский счет. Конструктор должен принимать два
+аргумента: accountNumber (строка) и balance (число). Конструктор
+должен создавать объект с указанными свойствами accountNumber и
+balance и следующими методами:
+1. deposit(amount): принимает аргумент amount (число) и увеличивает
+баланс на указанную сумму.
+2. withdraw(amount): принимает аргумент amount (число) и уменьшает
+баланс на указанную сумму, если на счету есть достаточно средств.
+Если средств недостаточно, выводится сообщение "Недостаточно
+средств на счете.".
+3. getBalance(): возвращает текущий баланс счета.   
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function BankAccount(accountNumber, balance) {
+            this.accountNumber = accountNumber;
+            this.balance = balance;
+
+            this.deposit = function (amount) {
+                this.balance += amount;
+            };
+
+            this.withdraw = function (amount) {
+                if (amount <= this.balance) {
+                    this.balance -= amount;
+                } else {
+                    console.log("Недостаточно средств на счете.");
+                }
+            };
+
+            this.getBalance = function () {
+                return this.balance;
+            };
+        }
+
+        const account = new BankAccount("123456789", 1000);
+        console.log(account.getBalance());
+
+        account.deposit(500);
+        console.log(account.getBalance());
+
+        account.withdraw(200);
+        console.log(account.getBalance());
+
+        account.withdraw(2000);
+        console.log(account.getBalance()); 
+    </script>
+</body>
+
+</html>

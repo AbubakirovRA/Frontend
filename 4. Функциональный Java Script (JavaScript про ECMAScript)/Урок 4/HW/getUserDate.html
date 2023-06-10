@@ -1,0 +1,97 @@
+<!-- 
+Получение данных о пользователе
+
+Реализуйте функцию getUserData, 
+которая принимает идентификатор пользователя (ID) в качестве аргумента 
+и использует fetch для получения данных о пользователе с заданным ID с удаленного сервера. 
+
+Функция должна возвращать промис, 
+который разрешается с данными о пользователе в виде объекта. 
+
+Если пользователь с указанным ID не найден, 
+промис должен быть отклонен с соответствующим сообщением об ошибке.
+
+Подсказка, с последовательностью действий:
+getUserData использует fetch для получения данных о пользователе с удаленного сервера. 
+Если запрос успешен (с кодом 200), функция извлекает данные из ответа с помощью response.json() 
+и возвращает объект с данными о пользователе. 
+Если запрос неуспешен, функция отклоняет промис с сообщением об ошибке.
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarWars heroes</title>
+    <style>
+        .output {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <label>Get Hero data
+        <input type="text" class="userID">
+    </label>
+    <button class="sendRequest">Send request</button>
+    <div class="output"></div>
+
+    <script>
+        const sendRequestBtn = document.querySelector('.sendRequest');
+        sendRequestBtn.addEventListener('click', () => {
+            const userID = document.querySelector('.userID').value;
+            getUserData(userID);
+        });
+
+        function getUserData(userID) {
+            const outputBlock = document.querySelector('.output');
+            outputBlock.innerHTML = 'Download userData...';
+
+            fetch(`https://swapi.dev/api/people/${userID}`)
+                .then(response => {
+                    if (response.status === 200) {
+                        return response.json();
+                    } else {
+                        throw new Error('User not found');
+                    }
+                })
+                .then(userData => {
+                    outputBlock.innerHTML = formatUserData(userData);
+                })
+                .catch(error => {
+                    outputBlock.innerHTML = '<span class="error"> Error: ' + error.message + '</span>';
+                });
+        };
+
+        // function formatUserData(userData) {
+        //     let formattedData = '';
+        //     for (const key in userData) {
+        //         if (userData.hasOwnProperty(key)) {
+        //             formattedData += `<strong>${key}</strong>${userData[key]}<br>`;
+        //         }
+        //     }
+        //     return `<pre>${formattedData}</pre>`;
+        // };
+
+        function formatUserData(userData) {
+            const formattedData = Object.entries(userData).reduce((acc, [key, value]) => {
+                return `${acc}<strong>${key}:</strong> ${value}<br>`;
+            }, '');
+            return `<pre>${formattedData}</pre>`;
+        }
+    </script>
+</body>
+
+</html>

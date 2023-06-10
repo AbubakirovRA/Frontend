@@ -1,0 +1,54 @@
+<!-- 
+Создайте объект Person, представляющий человека, с 
+следующими свойствами: name, age и gender. Добавьте
+также методы introduce и changeName. Метод introduce
+должен выводить информацию о человеке, включая его
+имя, возраст и пол. Метод changeName должен изменять
+имя человека на новое заданное значение.
+Person.name = "John";
+Person.age = 25;
+Person.gender = "male";
+Person.introduce(); // Ожидаемый результат: My name is
+John. I'm 25 years old and I identify as male.
+Person.changeName("Mike");
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Object Example</title>
+</head>
+
+<body>
+    <button onclick="introducePerson()">Introduce</button>
+    <button onclick="changePersonName()">Change Name</button>
+    <script>
+        // JavaScript код для создания объекта Person и взаимодействия с ним
+        const Person = {
+            name: "John",
+            age: 25,
+            gender: "male",
+            introduce: function () {
+                alert("My name is " + this.name + ". I'm " + this.age + " years old and I identify as " + this.gender + ".");
+            },
+            changeName: function (newName) {
+                this.name = newName;
+            }
+        };
+
+        function introducePerson() {
+            Person.introduce();
+        }
+
+        function changePersonName() {
+            const newName = prompt("Enter the new name:");
+            Person.changeName(newName);
+            introducePerson();
+        }
+    </script>
+</body>
+
+</html>
