@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список контактов</title>
+    <style>
+        #app ul li {
+            padding-bottom: 10px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Добавить контактные данные</h1>
+        <label>Имя:<br>
+            <input type="text" v-model="newContactName" placeholder="Имя" required>
+        </label>
+        <br>
+        <label>Фамилия:<br>
+            <input type="text" v-model="newContactLastName" placeholder="Фамилия" required>
+        </label>
+        <br>
+        <label>Email:<br>
+            <input type="email" v-model="newContactEmail" placeholder="Email" required>
+        </label>
+        <br>
+        <button @click="addContact">Добавить контакт</button>
+
+        <h2>Список контактов:</h2>
+        <ul>
+            <li v-for="(contact, index) in contacts" :key="index">
+                {{ contact.name }} {{ contact.lastName }} - {{ contact.email }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                newContactName: '',
+                newContactLastName: '',
+                newContactEmail: '',
+                contacts: []
+            },
+            methods: {
+                addContact() {
+                    const newContact = {
+                        name: this.newContactName,
+                        lastName: this.newContactLastName,
+                        email: this.newContactEmail
+                    };
+
+                    this.contacts.push(newContact);
+
+                    this.newContactName = '';
+                    this.newContactLastName = '';
+                    this.newContactEmail = '';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!-- 
+Создать кнопку “Показать еще” 
+при клике на которую появляется контент под кнопкой, 
+при повторном клике, контент необходимо скрыть
+Добавить анимацию появления текстового блока
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show More Button</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .animation {
+            transition: opacity 3s;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="toggle">Показать еще</button>
+        <div class="animation">
+            <p v-show="show">Доп.контент</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                show: false
+            },
+            methods: {
+                toggle() {
+                    this.show = !this.show;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

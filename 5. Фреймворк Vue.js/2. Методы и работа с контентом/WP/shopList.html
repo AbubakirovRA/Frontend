@@ -1,0 +1,60 @@
+<!-- 
+Вы разрабатываете приложение для создания списка покупок. 
+У вас есть массив объектов items, где каждый объект представляет товар с его названием и количеством. 
+Вам необходимо отобразить список товаров, 
+предоставить возможность изменять количество каждого товара и отмечать товары, которые уже куплены.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список покупок</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .shopList {
+            width: 250px;
+        }
+
+        .input {
+            width: 100px;
+        }
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="shopList">
+            <ul>
+                <li v-for="item in items" :key="item.id" :class="{ 'completed': item.checked }">
+                    <input type="number" v-model="item.quantity" class="input">
+                    <label>
+                        <input :id="'checkbox-' + item.id" type="checkbox" v-model="item.checked">
+                        {{ item.name }}
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                items: [
+                    { id: 1, name: 'Яблоки', quantity: 0, checked: false },
+                    { id: 2, name: 'Молоко', quantity: 0, checked: false },
+                    { id: 3, name: 'Хлеб', quantity: 0, checked: false },
+                ]
+            }
+        });
+    </script>
+</body>
+
+</html>
+

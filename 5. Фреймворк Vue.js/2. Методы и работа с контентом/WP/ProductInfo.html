@@ -1,0 +1,51 @@
+<!-- 
+Вы разрабатываете страницу для отображения информации о товаре. У вас есть объект product, который содержит информацию о товаре, включая название, цену и URL изображения товара. Вам необходимо отобразить эту информацию на странице с использованием v-bind.
+Добавьте кнопку, которая будет изменять цену товара. При нажатии на кнопку должна генерироваться скидка на товар от 1 до 20% и обновиться цена товара в соответствии с значением скидки
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="product">
+            <h1>{{ product.name }}</h1>
+            <img :src="product.imageUrl" :alt="product.name" width="200">
+            <p>Цена: {{ product.price }} руб.</p>
+            <button @click="generateDiscount">Генерировать скидку</button>
+            <p v-if="discountedPrice">Цена со скидкой: {{ discountedPrice }} руб.</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                product: {
+                    name: 'Очень крутой товар',
+                    price: 1000,
+                    imageUrl: 'https://img.freepik.com/free-psd/shoes-sale-social-media-post-square-banner-template-design_505751-3607.jpg?w=740&t=st=1686850985~exp=1686851585~hmac=1210990da00e0f841012587278c67cd152553c52b5eb02726df97d659d9d5112'
+                },
+                discountedPrice: null
+            },
+            methods: {
+                generateDiscount() {
+                    if (!this.discountedPrice) {
+                        const discountPercent = Math.floor(Math.random() * 20) + 1;
+                        const discountAmount = this.product.price * (discountPercent / 100);
+                        this.discountedPrice = this.product.price - discountAmount;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

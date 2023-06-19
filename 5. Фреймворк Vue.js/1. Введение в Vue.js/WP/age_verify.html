@@ -1,0 +1,43 @@
+<!-- 
+Создать две кнопки “Мне исполнилось 14 лет” и “Мне еще нет 14 лет”
+Если пользователь нажимает на первую кнопку, то должен отобразиться текст. “Можете заказать товар”
+Если пользователь нажимает на вторую кнопку, отображается текст “Доступ закрыт” 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="showYes">Мне исполнилось 14 лет</button>
+        <button @click="showNo">Мне еще нет 14 лет</button>
+
+        <p v-if="access">Можете заказать товар</p>
+        <p v-else>Доступ закрыт</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                access: false
+            },
+            methods: {
+                showYes() {
+                    this.access = true;
+                },
+                showNo() {
+                    this.access = false;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

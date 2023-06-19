@@ -1,0 +1,47 @@
+<!-- 
+Создать параграф, внутри которого будет отображаться текст “Товаров в корзине 0”
+Создать кнопку “Купить”, при клике на которую, значение внутри параграфа будет увеличиваться на 1, 
+при повторном нажатии на эту кнопку, счетчик не становится больше, 
+добавить 4 таких кнопки
+При нажатии на кнопку купить, необходимо чтобы текст внутри кнопки поменялся на “Товар в Корзине”
+ -->
+
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Cart</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ </head>
+ <body>
+   <div id="app">
+     <p>Товаров в корзине {{ сount }}</p>
+     <button v-for="product in products" :key="product.id" @click="addToCart(product)">
+       {{ product.text }}
+     </button>
+   </div>
+ 
+   <script>
+    new Vue({
+       el: '#app',
+       data: {
+         сount: 0,
+         products: [
+           { id: 1, text: 'Купить' },
+           { id: 2, text: 'Купить' },
+           { id: 3, text: 'Купить' },
+           { id: 4, text: 'Купить' }
+         ]
+       },
+       methods: {
+         addToCart(product) {
+           if (product.text === 'Купить') {
+             this.сount += 1;
+             product.text = 'Товар в Корзине';
+           }
+         }
+       }
+     });
+   </script>
+ </body>
+ </html>
