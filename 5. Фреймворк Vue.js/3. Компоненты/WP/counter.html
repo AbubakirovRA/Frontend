@@ -1,0 +1,59 @@
+<!-- 
+задачка по vue: используя компонентный подход создайте html-страницу и
+разместите на ней компонент счетчика, 
+который имеет кнопку "+" и кнопку "-", 
+и отображает текущее значение счетчика. 
+При нажатии на кнопки счетчик должен увеличиваться или уменьшаться соответственно.
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <title>Vue Counter Component</title>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <counter></counter>
+        <counter></counter>
+    </div>
+
+    <script>
+        Vue.component('counter', {
+            data() {
+                return {
+                    count: 0
+                };
+            },
+            methods: {
+                increment() {
+                    this.count++;
+                },
+                decrement() {
+                    if (this.count > 0) {
+                        this.count--;
+                    }
+                }
+            },
+            template: `
+                <div>
+                    <button @click="decrement">-</button>
+                    <span>{{ count }}</span>
+                    <button @click="increment">+</button>
+                </div>
+                `
+        });
+
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+
+</html>

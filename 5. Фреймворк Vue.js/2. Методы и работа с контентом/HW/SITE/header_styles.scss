@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 44px 360px 57px;
+  
+    &__left {
+      .logo {
+        display: flex;
+        align-items: center;
+  
+        &__image {
+          margin-right: 10px;
+        }
+      }
+  
+    }
+  
+    &__right {
+      .menu {
+        width: 243px;
+        height: 25px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
