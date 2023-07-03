@@ -1,0 +1,47 @@
+.wrapper {
+  overflow: hidden;
+  max-width: 1920px;
+}
+
+.top {
+  width: 1200px;
+  padding-bottom: 44px;
+}
+
+.center {
+  padding-left: calc(50% - 960px);
+  padding-right: calc(50% - 960px);
+}
+
+body {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tittle {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 125%;
+  color: #292f36;
+}
+
+.banner {
+  position: relative;
+}
+
+.blog {
+  display: flex;
+  padding-left: 360px;
+}
+.blog__details tittle {
+  width: 684px;
+}/*# sourceMappingURL=index__style.css.map */
