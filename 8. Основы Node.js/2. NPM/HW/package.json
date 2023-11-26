@@ -16,4 +16,8 @@
   "devDependencies": {
     "jest": "^29.7.0"
   }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbubakirovRA/Frontend/tree/main/8.%20Основы%20Node.js/2.%20NPM/HW"
+  }
 }
