@@ -10,7 +10,7 @@
 
 npm install passgen
 
-##Использование:
+## Использование:
 
 // Подключение библиотеки
 const passgen = require('passgen');
@@ -20,7 +20,7 @@ const password = passgen(12, { letters: true, numbers: true, symbols: true });
 
 console.log('Сгенерированный пароль:', password);
 
-##Параметры
+## Параметры
 Функция passgen принимает два параметра:
 
 length (обязательный): длина генерируемого пароля.
