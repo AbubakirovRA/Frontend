@@ -8,20 +8,20 @@
 ## Установка:
 Чтобы установить библиотеку, выполните следующую команду:
 
-npm install passgen
+npm install abubakirovra-passgen
 
 ##Использование:
 
 // Подключение библиотеки
-const passgen = require('passgen');
+const passgen = require('abubakirovra-passgen');
 
 // Генерация пароля длиной 12 символов с использованием букв, цифр и специальных символов
-const password = passgen(12, { letters: true, numbers: true, symbols: true });
+const password = abubakirovra-passgen(12, { letters: true, numbers: true, symbols: true });
 
 console.log('Сгенерированный пароль:', password);
 
 ##Параметры
-Функция passgen принимает два параметра:
+Функция abubakirovra-passgen принимает два параметра:
 
 length (обязательный): длина генерируемого пароля.
 options (необязательный): объект с параметрами для использования различных типов символов. Поддерживаемые параметры:
