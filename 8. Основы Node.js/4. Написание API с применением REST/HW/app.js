@@ -103,6 +103,7 @@ app.post('/users', checkDataFile, async (req, res) => {
     }
 });
 
+// Обновление данных существующего пользователя
 app.put('/users/:id', checkDataFile, async (req, res) => {
     const userId = parseInt(req.params.id);
 
