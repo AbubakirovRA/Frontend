@@ -1,5 +1,6 @@
 homework4
 
+запустить сервер в консоли - node app.js;
 Команды API из PowerShell:
 Просмотр всех пользователей - curl http://localhost:3000/users/;
 Просмотр пользователя по номеру id - curl http://localhost:3000/users/id;
